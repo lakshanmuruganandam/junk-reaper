@@ -1,14 +1,22 @@
 {
   "name": "junk-reaper",
   "version": "1.0.4",
-  "description": "",
+  "description": "Find and destroy useless files clogging your project directories.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "junk",
+    "cleanup",
+    "cli",
+    "reaper",
+    "node_modules",
+    "DS_Store",
+    "logs"
+  ],
+  "author": "Lakshan Muruganandam <lakshan@example.com>",
+  "license": "MIT",
   "dependencies": {
     "boxen": "^8.0.1",
     "cli-spinners": "^3.4.0",
