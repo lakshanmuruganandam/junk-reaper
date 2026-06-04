@@ -26,7 +26,8 @@ const banner = `
 `;
 
 console.log(pc.yellow(banner));
-console.log(pc.gray('    Sweep the hidden garbage.\n'));
+console.log(pc.gray('    Sweep the hidden garbage.'));
+console.log(pc.dim('    Architected by @lakshanmuruganandam\n'));
 
 const formatBytes = (bytes) => {
   if (bytes === 0) return '0 B';
@@ -48,7 +49,6 @@ const run = async () => {
 
   if (files.length === 0) {
     console.log(pc.green(`✨ Scan complete in ${timeTaken}s. Your project is completely clean.`));
-    console.log(pc.cyan('\nArchitected by @lakshanmuruganandam\n'));
     process.exit(0);
   }
 
@@ -84,7 +84,6 @@ const run = async () => {
 
   if (selected.length === 0) {
     console.log(pc.gray('\nMission aborted. No files deleted.'));
-    console.log(pc.cyan('\nArchitected by @lakshanmuruganandam\n'));
     process.exit(0);
   }
 
@@ -97,7 +96,6 @@ const run = async () => {
 
   if (!confirm) {
     console.log(pc.gray('\nMission aborted.'));
-    console.log(pc.cyan('\nArchitected by @lakshanmuruganandam\n'));
     process.exit(0);
   }
 
@@ -119,8 +117,6 @@ const run = async () => {
       { padding: 1, margin: { top: 1 }, borderStyle: 'round', borderColor: 'green' }
     )
   );
-
-  console.log(pc.cyan('\nArchitected by @lakshanmuruganandam\n'));
 };
 
 run().catch(e => {
