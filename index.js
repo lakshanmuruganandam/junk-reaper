@@ -16,12 +16,17 @@ program
   .version('1.0.0')
   .parse(process.argv);
 
-console.log(
-  boxen(
-    pc.yellow(pc.bold('🗑️ JUNK REAPER')) + '\n' + pc.gray('Sweep the hidden garbage.'),
-    { padding: 1, margin: 1, borderStyle: 'double', borderColor: 'yellow' }
-  )
-);
+const banner = `
+    ██╗██╗   ██╗███╗   ██╗██╗  ██╗    ██████╗ ███████╗ █████╗ ██████╗ ███████╗██████╗ 
+    ██║██║   ██║████╗  ██║██║ ██╔╝    ██╔══██╗██╔════╝██╔══██╗██╔══██╗██╔════╝██╔══██╗
+    ██║██║   ██║██╔██╗ ██║█████╔╝     ██████╔╝█████╗  ███████║██████╔╝█████╗  ██████╔╝
+    ██║██║   ██║██║╚██╗██║██╔═██╗     ██╔══██╗██╔══╝  ██╔══██║██╔═══╝ ██╔══╝  ██╔══██╗
+    ██║╚██████╔╝██║ ╚████║██║  ██╗    ██║  ██║███████╗██║  ██║██║     ███████╗██║  ██║
+    ╚═╝ ╚═════╝ ╚═╝  ╚═══╝╚═╝  ╚═╝    ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝╚═╝     ╚══════╝╚═╝  ╚═╝
+`;
+
+console.log(pc.yellow(banner));
+console.log(pc.gray('    Sweep the hidden garbage.\n'));
 
 const formatBytes = (bytes) => {
   if (bytes === 0) return '0 B';
