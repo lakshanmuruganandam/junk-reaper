@@ -1,6 +1,6 @@
 {
   "name": "junk-reaper",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Find and destroy useless files clogging your project directories.",
   "main": "index.js",
   "scripts": {
